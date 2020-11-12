@@ -8,10 +8,18 @@ const Cliente = require('./models/cliente')
 
 app.use (bodyParser.json());
 
-mongoose.connect('mongodb+srv://user:14eDE33AA49898aAv@cluster0.xpndi.mongodb.net/app-mean?retryWrites=true&w=majority',
-  { useNewUrlParser: true,
+
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://user:<usjt>@cluster0.vjxze.mongodb.net/<user>?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+
     useUnifiedTopology: true
-   })
+
   .then(() => {
     console.log("Conexão OK!");
   })
