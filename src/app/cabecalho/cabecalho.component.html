@@ -1,3 +1,15 @@
 <mat-toolbar color="primary">
-  Cadastro de Livros
-  </mat-toolbar>
+  <span><a routerLink="/">Cadastro de Livros</a></span>
+  <span class="separador"></span>
+  <ul>
+    <li>
+      <a
+        mat-button
+        routerLink="/criar"
+        routerLinkActive="mat-accent"
+      >
+        Novo Cliente
+      </a>
+    </li>
+  </ul>
+</mat-toolbar>

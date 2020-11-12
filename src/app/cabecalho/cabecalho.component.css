@@ -1,6 +1,12 @@
-div {
-  background-color: blue;
-  border: 5%;
-  margin-top: 1%;
+a {
+  text-decoration: none;
+  color: white;
+}
 
+ul {
+  list-style: none;
+}
+
+.separador {
+  flex: 1;
 }
